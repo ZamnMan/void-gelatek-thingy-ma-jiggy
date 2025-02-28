@@ -3621,6 +3621,18 @@ btn("metamorphosis vibe", function()
 end)
 
 btn("giant", function()
+
+if replicatesignal then
+  replicatesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+elseif firesignal then
+    firesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+else
+    print("permadeath not supported lil bro")
+end
+wait(game.Players.RespawnTime + .1)
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(15)
+
+
 	local t=reanimate()
 	if type(t)~="table" then return end
 	local addmode=t.addmode
