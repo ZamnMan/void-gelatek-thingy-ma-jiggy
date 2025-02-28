@@ -3634,7 +3634,7 @@ btn("giant", function()
 	local Neck=getJoint("Neck")
         local getPartFromMesh=t.getPartFromMesh
         local getPartJoint=t.getPartJoint
-	t.setWalkSpeed(4.5)
+	t.setWalkSpeed(7)
         t.setHipHeight(3.8)
 
 local movingla = getPartFromMesh(117649985156221,103757531289975)
